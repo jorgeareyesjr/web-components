@@ -8,7 +8,7 @@ function NoMatch() {
 	return (
 		<>
 			<h2>Oops, this page URL is not supported.</h2>
-			<Link to="/">Go to the home page</Link>
+			<Link to="/web-components">Go to the home page</Link>
 		</>
 	);
 };
