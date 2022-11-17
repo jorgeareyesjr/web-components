@@ -3,7 +3,7 @@ import React from 'react';
 const AppRoutes = [
 	{
 		id: 1,
-		name: 'landing',
+		name: 'Landing',
 		path: '/web-components',
 		element: <>Landing</>,
 	},
