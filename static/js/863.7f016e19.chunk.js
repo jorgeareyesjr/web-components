@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkweb_components=self.webpackChunkweb_components||[]).push([[863],{1863:function(e,n,s){s.r(n),s.d(n,{default:function(){return c}});s(2791);var t=s(6075),u=s(184);function c(){return(0,u.jsx)(u.Fragment,{children:(0,u.jsx)(t.Z,{message:"Test Landing Page"})})}}}]);
+//# sourceMappingURL=863.7f016e19.chunk.js.map
