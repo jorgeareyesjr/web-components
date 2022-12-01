@@ -1,0 +1,58 @@
+.c-main {
+	/* Account for the site's Header - it's fixed to the top of the page and has a height of 65px. */
+	margin-top: 65px;
+	padding: 15px;
+	transform: translate(0px, 0px);
+	transition: all 0.3s;
+}
+
+/* Top Push Nav */
+.l-layout--top-push-nav.l-layout--nav-is-open .c-main {
+	transform: var(--transformY);
+}
+
+/* Right Push Nav */
+.l-layout--right-push-nav.l-layout--nav-is-open .c-main {
+	transform: var(--negative-transformX);
+}
+
+/* Bottom Push Nav */
+.l-layout--bottom-push-nav .c-main {
+	/* Account for the site's Header - it's fixed to the top of the page and has a height of 65px. */
+	margin-top: 0;
+	margin-bottom: 65px;
+}
+
+.l-layout--bottom-push-nav.l-layout--nav-is-open .c-main {
+	transform: var(--negative-transformY);
+}
+
+/* Left Push Nav */
+.l-layout--left-push-nav.l-layout--nav-is-open .c-main {
+	transform: var(--transformX);
+}
+
+@media (min-width: 300px) {
+	.c-main {
+		padding: 15px;
+	}
+}
+
+@media (min-width: 600px) {
+	.c-main {
+		padding: 30px;
+	}
+}
+
+@media (min-width: 900px) {
+	.c-main {
+		padding: 45px;
+	}
+}
+
+
+@media (min-width: 1200px) {
+	.c-main {
+		padding: 60px;
+	}
+}
