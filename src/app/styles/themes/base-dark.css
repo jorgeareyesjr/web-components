@@ -1,0 +1,209 @@
+/****** Dark Theme Base Colors ******/
+:root {
+	--black: #000;
+	--white: #fff;
+	--t-dark__base: #17181c;
+	--t-dark__base--lighter: #1e1f24;
+
+	/* Box shadows */
+	--t-dark__light: rgba(255, 255, 255, 0.0625);
+	--t-dark__light--fill: #3a3c45;
+	--t-dark__shadow: rgba(0, 0, 0, 0.75);
+	--t-dark__shadow--fill: #111215;
+
+	/* Shines */
+	--t-dark__shine--top: 0px -8px 18px 0;
+	--t-dark__shine--top-right: 8px -8px 18px 0;
+	--t-dark__shine--top-left: -8px -8px 18px 0;
+	--t-dark__shine--bottom: 0px 8px 18px 0;
+	--t-dark__shine--bottom-right: 8px 8px 18px 0;
+	--t-dark__shine--bottom-left: -8px 8px 18px 0;
+
+	/* Shadows */
+	--t-dark__shadow--top: 0px -6px 14px 0;
+	--t-dark__shadow--top-right: 6px -6px 14px 0;
+	--t-dark__shadow--top-left: -6px -6px 14px 0;
+	--t-dark__shadow--bottom: 0px 6px 14px 0;
+	--t-dark__shadow--bottom-right: 6px 6px 14px 0;
+	--t-dark__shadow--bottom-left: -6px 6px 14px 0;
+
+	/* Fonts */
+	--t-dark__base-font--light: #bbbbbb;
+}
+
+.t-theme--dark {
+	background: var(--t-dark__base);
+}
+
+/****** Fonts ******/
+.t-theme--dark a,
+.t-theme--dark a:visited,
+.t-theme--dark a:hover {
+	color: var(--white);
+}
+
+.t-theme--dark h1,
+.t-theme--dark h2,
+.t-theme--dark h3,
+.t-theme--dark h4,
+.t-theme--dark h5,
+.t-theme--dark h6,
+.t-theme--dark p {
+	color: var(--t-dark__base-font--light);
+}
+
+/****** inputs ******/
+.t-theme--dark input {
+	border: 1px solid var(--white);
+}
+
+.t-theme--dark input[type="radio"]:checked:after {
+	background: var(--white);
+}
+
+/****** Components ******/
+
+/*** Arrow ***/
+.t-theme--dark .c-arrow {
+	border-right: 3px solid var(--white);
+	border-bottom: 3px solid var(--white);
+}
+
+/*** Header ***/
+.t-theme--dark .c-header {
+	background: var(--t-dark__base);
+}
+
+/* button */
+.t-theme--dark .c-header .c-button {
+	background: var(--t-dark__base);
+}
+
+.t-theme--dark .c-header .c-button__span {
+	background: var(--white);
+}
+
+/* button: hover */
+.t-theme--dark .c-header .c-button:hover {
+	background: var(--white);
+}
+
+.t-theme--dark .c-header .c-button:hover .c-button__span {
+	background: var(--black);
+}
+
+/* button: open nav */
+.t-theme--dark .l-layout--nav-is-open .c-header .c-button {
+	background: var(--t-dark__base-lighter);
+}
+
+/* button: open nav, hover */
+.t-theme--dark .l-layout--nav-is-open .c-header .c-button:hover {
+	background: var(--white);
+}
+
+/* box-shadows: */
+/* Note, unlike the rest of the app styles, the header's box-shadows do not follow the expected pattern. */
+.t-theme--dark .l-layout--top-push-nav .c-header,
+.t-theme--dark .l-layout--right-push-nav .c-header,
+.t-theme--dark .l-layout--left-push-nav .c-header {
+	box-shadow:
+		var(--t-dark__shine--top) var(--t-dark__light),
+		var(--t-dark__shadow--bottom) var(--t-dark__shadow);
+}
+
+.t-theme--dark .l-layout--bottom-push-nav .c-header {
+	box-shadow:
+		var(--t-dark__shine--bottom) var(--t-dark__light),
+		var(--t-dark__shadow--top) var(--t-dark__shadow);
+}
+
+/*** Nav ***/
+.t-theme--dark .c-nav a,
+.t-theme--dark .c-nav a:visited,
+.t-theme--dark .c-nav a:hover,
+.t-theme--dark .c-nav h1,
+.t-theme--dark .c-nav h2,
+.t-theme--dark .c-nav h3,
+.t-theme--dark .c-nav h4,
+.t-theme--dark .c-nav h5,
+.t-theme--dark .c-nav h6,
+.t-theme--dark.c-nav p {
+	color: var(--white);
+}
+
+/* Primary */
+.t-theme--dark .c-nav--primary {
+	background: var(--t-dark__base--lighter);
+}
+
+/* Secondary */
+.t-theme--dark .c-nav--secondary .c-list__listing:hover,
+.t-theme--dark .c-nav--secondary .c-list__listing:hover.u--is-active:hover {
+	background-color: var(--white);
+}
+
+.t-theme--dark .c-nav--secondary .c-list__listing.u--is-active {
+	background-color: var(--t-dark__light--fill);
+}
+
+.t-theme--dark .c-nav--secondary .c-list__listing:hover a,
+.t-theme--dark .c-nav--secondary .c-list__listing:hover a:visited,
+.t-theme--dark .c-nav--secondary .c-list__listing:hover a:hover,
+.t-theme--dark .c-nav--secondary .c-list__listing:hover h1,
+.t-theme--dark .c-nav--secondary .c-list__listing:hover h2,
+.t-theme--dark .c-nav--secondary .c-list__listing:hover h3,
+.t-theme--dark .c-nav--secondary .c-list__listing:hover h4,
+.t-theme--dark .c-nav--secondary .c-list__listing:hover h5,
+.t-theme--dark .c-nav--secondary .c-list__listing:hover h6,
+.t-theme--dark .c-nav--secondary .c-list__listing:hover p,
+.t-theme--dark .c-nav--secondary .c-list__listing:hover.u--is-active:hover a,
+.t-theme--dark .c-nav--secondary .c-list__listing:hover.u--is-active:hover a:visited,
+.t-theme--dark .c-nav--secondary .c-list__listing:hover.u--is-active:hover a:hover,
+.t-theme--dark .c-nav--secondary .c-list__listing:hover.u--is-active:hover h1,
+.t-theme--dark .c-nav--secondary .c-list__listing:hover.u--is-active:hover p {
+	color: var(--black);
+}
+
+/* box-shadows: Top Push Nav */
+.t-theme--dark .l-layout--top-push-nav .c-nav--primary .c-dropdown__title,
+.t-theme--dark .l-layout--top-push-nav .c-nav--primary .c-dropdown__content {
+	box-shadow:
+		var(--t-dark__shine--top) var(--t-dark__light),
+		var(--t-dark__shadow--bottom) var(--t-dark__shadow);
+}
+
+/* box-shadows: Right Push Nav */
+.t-theme--dark .l-layout--right-push-nav .c-nav--primary .c-dropdown__title,
+.t-theme--dark .l-layout--right-push-nav .c-nav--primary .c-dropdown__content {
+	box-shadow:
+		var(--t-dark__shine--top-right) var(--t-dark__light),
+		var(--t-dark__shadow--bottom-left) var(--t-dark__shadow);
+}
+
+/* box-shadows: Bottom Push Nav */
+.t-theme--dark .l-layout--bottom-push-nav .c-nav--primary .c-dropdown__title,
+.t-theme--dark .l-layout--bottom-push-nav .c-nav--primary .c-dropdown__content {
+	box-shadow:
+		var(--t-dark__shine--bottom) var(--t-dark__light),
+		var(--t-dark__shadow--top) var(--t-dark__shadow);
+}
+
+/* box-shadows: Left Push Nav */
+.t-theme--dark .l-layout--left-push-nav .c-nav--primary .c-dropdown__title,
+.t-theme--dark .l-layout--left-push-nav .c-nav--primary .c-dropdown____content {
+	box-shadow:
+		var(--t-dark__shine--top-left) var(--t-dark__light),
+		var(--t-dark__shadow--bottom-right) var(--t-dark__shadow);
+}
+
+/*** Spinner ***/
+.t-theme--dark .c-spinner__animation::before {
+	border-color: var(--t-dark__light--fill);
+	border-bottom-color: var(--white);
+}
+
+/****** Overriding Decorators ******/
+.t-theme--dark .t-decorator--word {
+	color: var(--white);
+}

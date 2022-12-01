@@ -1,0 +1,209 @@
+/****** Light Theme Base Colors ******/
+:root {
+	--black: #000;
+	--white: #fff;
+	--t-light__base: #ebecf0;
+	--t-light__base--darker: #dfe1e7;
+
+	/* Box shadows */
+	--t-light__light: rgba(255, 255, 255, 0.75);
+	--t-light__light--fill: #ebecf0;
+	--t-light__shadow: rgba(0, 0, 0, 0.25);
+	--t-light__shadow--fill: #c2c4c9;
+
+	/* Shines */
+	--t-light__shine--top: 0px -8px 18px 0;
+	--t-light__shine--top-right: 8px -8px 18px 0;
+	--t-light__shine--top-left: -8px -8px 18px 0;
+	--t-light__shine--bottom: 0px 8px 18px 0;
+	--t-light__shine--bottom-right: 8px 8px 18px 0;
+	--t-light__shine--bottom-left: -8px 8px 18px 0;
+
+	/* Shadows */
+	--t-light__shadow--top: 0px -6px 14px 0;
+	--t-light__shadow--top-right: 6px -6px 14px 0;
+	--t-light__shadow--top-left: -6px -6px 14px 0;
+	--t-light__shadow--bottom: 0px 6px 14px 0;
+	--t-light__shadow--bottom-right: 6px 6px 14px 0;
+	--t-light__shadow--bottom-left: -6px 6px 14px 0;
+
+	/* Fonts */
+	--t-light__base-font--shadow: #323234;
+}
+
+.t-theme--light {
+	background: var(--t-light__base);
+}
+
+/****** Fonts ******/
+.t-theme--light a,
+.t-theme--light a:visited,
+.t-theme--light a:hover {
+	color: var(--black);
+}
+
+.t-theme--light h1,
+.t-theme--light h2,
+.t-theme--light h3,
+.t-theme--light h4,
+.t-theme--light h5,
+.t-theme--light h6,
+.t-theme--light p {
+	color: var(--t-light__base-font--shadow);
+}
+
+/****** inputs ******/
+.t-theme--light input {
+	border: 1px solid var(--black);
+}
+
+.t-theme--light input[type="radio"]:checked:after {
+	background: var(--black);
+}
+
+/****** Components ******/
+
+/*** Arrow ***/
+.t-theme--light .c-arrow {
+	border-right: 3px solid var(--black);
+	border-bottom: 3px solid var(--black);
+}
+
+/*** Header ***/
+.t-theme--light .c-header {
+	background: var(--t-light__base);
+}
+
+/* button */
+.t-theme--light .c-header .c-button {
+	background: var(--t-light__base);
+}
+
+.t-theme--light .c-header .c-button__span {
+	background: var(--black);
+}
+
+/* button: hover */
+.t-theme--light .c-header .c-button:hover {
+	background: var(--black);
+}
+
+.t-theme--light .c-header .c-button:hover .c-button__span {
+	background: var(--white);
+}
+
+/* button: open nav */
+.t-theme--light .l-layout--nav-is-open .c-header .c-button {
+	background: var(--t-light__base--darker);
+}
+
+/* button: open nav, hover */
+.t-theme--light .l-layout--nav-is-open .c-header .c-button:hover {
+	background: var(--black);
+}
+
+/* box-shadows: */
+/* Note, unlike the rest of the app styles, the header's box-shadows do not follow the expected pattern. */
+.t-theme--light .l-layout--top-push-nav .c-header,
+.t-theme--light .l-layout--right-push-nav .c-header,
+.t-theme--light .l-layout--left-push-nav .c-header {
+	box-shadow:
+		var(--t-light__shine--top) var(--t-light__light),
+		var(--t-light__shadow--bottom) var(--t-light__shadow);
+}
+
+.t-theme--light .l-layout--bottom-push-nav .c-header {
+	box-shadow:
+		var(--t-light__shine--bottom) var(--t-light__light),
+		var(--t-light__shadow--top) var(--t-light__shadow);
+}
+
+/*** Nav ***/
+.t-theme--light .c-nav a,
+.t-theme--light .c-nav a:visited,
+.t-theme--light .c-nav a:hover,
+.t-theme--light .c-nav h1,
+.t-theme--light .c-nav h2,
+.t-theme--light .c-nav h3,
+.t-theme--light .c-nav h4,
+.t-theme--light .c-nav h5,
+.t-theme--light .c-nav h6,
+.t-theme--light.c-nav p {
+	color: var(--black);
+}
+
+/* Primary */
+.t-theme--light .c-nav--primary {
+	background: var(--t-light__base--darker);
+}
+
+/* Secondary */
+.t-theme--light .c-nav--secondary .c-list__listing:hover,
+.t-theme--light .c-nav--secondary .c-list__listing:hover.u--is-active:hover {
+	background-color: var(--black);
+}
+
+.t-theme--light .c-nav--secondary .c-list__listing.u--is-active {
+	background-color: var(--t-light__shadow--fill);
+}
+
+.t-theme--light .c-nav--secondary .c-list__listing:hover a,
+.t-theme--light .c-nav--secondary .c-list__listing:hover a:visited,
+.t-theme--light .c-nav--secondary .c-list__listing:hover a:hover,
+.t-theme--light .c-nav--secondary .c-list__listing:hover h1,
+.t-theme--light .c-nav--secondary .c-list__listing:hover h2,
+.t-theme--light .c-nav--secondary .c-list__listing:hover h3,
+.t-theme--light .c-nav--secondary .c-list__listing:hover h4,
+.t-theme--light .c-nav--secondary .c-list__listing:hover h5,
+.t-theme--light .c-nav--secondary .c-list__listing:hover h6,
+.t-theme--light .c-nav--secondary .c-list__listing:hover p,
+.t-theme--light .c-nav--secondary .c-list__listing:hover.u--is-active:hover a,
+.t-theme--light .c-nav--secondary .c-list__listing:hover.u--is-active:hover a:visited,
+.t-theme--light .c-nav--secondary .c-list__listing:hover.u--is-active:hover a:hover,
+.t-theme--light .c-nav--secondary .c-list__listing:hover.u--is-active:hover h1,
+.t-theme--light .c-nav--secondary .c-list__listing:hover.u--is-active:hover p {
+	color: var(--white);
+}
+
+/* box-shadows: Top Push Nav */
+.t-theme--light .l-layout--top-push-nav .c-nav--primary .c-dropdown__title,
+.t-theme--light .l-layout--top-push-nav .c-nav--primary .c-dropdown__content {
+	box-shadow:
+		var(--t-light__shine--top) var(--t-light__light),
+		var(--t-light__shadow--bottom) var(--t-light__shadow);
+}
+
+/* box-shadows: Right Push Nav */
+.t-theme--light .l-layout--right-push-nav .c-nav--primary .c-dropdown__title,
+.t-theme--light .l-layout--right-push-nav .c-nav--primary .c-dropdown__content {
+	box-shadow:
+		var(--t-light__shine--top-right) var(--t-light__light),
+		var(--t-light__shadow--bottom-left) var(--t-light__shadow);
+}
+
+/* box-shadows: Bottom Push Nav */
+.t-theme--light .l-layout--bottom-push-nav .c-nav--primary .c-dropdown__title,
+.t-theme--light .l-layout--bottom-push-nav .c-nav--primary .c-dropdown__content {
+	box-shadow:
+		var(--t-light__shine--bottom) var(--t-light__light),
+		var(--t-light__shadow--top) var(--t-light__shadow);
+}
+
+/* box-shadows: Left Push Nav */
+.t-theme--light .l-layout--left-push-nav .c-nav--primary .c-dropdown__title,
+.t-theme--light .l-layout--left-push-nav .c-nav--primary .c-dropdown____content {
+	box-shadow:
+		var(--t-light__shine--top-left) var(--t-light__light),
+		var(--t-light__shadow--bottom-right) var(--t-light__shadow);
+}
+
+/*** Spinner ***/
+.t-theme--light .c-spinner__animation::before {
+	border-color: var(--t-light__shadow--fill);
+	border-bottom-color: var(--black);
+}
+
+/****** Overriding Decorators ******/
+.t-theme--light .t-decorator--word {
+	color: var(--black);
+}
