@@ -1,17 +1,8 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { AppRoutes } from './Routes';
-import Layout from '../../layouts/default/Layout';
-
-// A catch-all for URLs that don't have explicit routes defined.
-function NoMatch() {
-	return (
-		<>
-			<h2>Oops, this page URL is not supported.</h2>
-			<Link to="/web-components">Go to the home page</Link>
-		</>
-	);
-};
+import AppLayout from '../AppLayout/AppLayout';
+import NoMatch from '../NoMatch/NoMatch'
 
 export default function Router() {
 	const mapRoutes = () => (
@@ -27,9 +18,8 @@ export default function Router() {
 
 	return (
 		<Routes>
-			{/* All routes are wrapped within Layout */}
-			<Route path="/" element={<Layout />}>
-				{ mapRoutes() }
+			<Route path="/" element={<AppLayout />}>
+				{mapRoutes()}
 				{/* The NoMatch component is a catch-all for any URLs that don't have explicit routes defined. */}
 				<Route path="*" element={<NoMatch />} />
 			</Route>
