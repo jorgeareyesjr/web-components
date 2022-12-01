@@ -1,23 +1,40 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
+import Spinner from '../Spinner/Spinner';
+
+// Implement page-based code splitting.
+const Landing = lazy(() => import('../../pages/Landing/Landing'));
+const lazyLoadLanding = () => (
+	<Suspense fallback={<Spinner />}>
+		<Landing />
+	</Suspense>
+);
+
+const Overview = lazy(() => import('../../pages/Overview/Overview'));
+const lazyLoadOverview = () => (
+	<Suspense fallback={<Spinner />}>
+		<Overview />
+	</Suspense>
+);
+
 
 const AppRoutes = [
 	{
 		id: 1,
 		name: 'Landing',
 		path: '/web-components',
-		element: <>Landing</>,
+		element: lazyLoadLanding(),
 	},
 	{
 		id: 2,
-		name: 'Test 1',
-		path: '/web-components/1',
-		element: <>1</>,
+		name: 'Overview',
+		path: '/overview',
+		element: lazyLoadOverview(),
 	},
 	{
 		id: 3,
-		name: 'Test 2',
-		path: '/web-components/2',
-		element: <>2</>,
+		name: 'Test Component 1',
+		path: '/web-components/1',
+		element: <>Test Component 1</>,
 	},
 ];
 
