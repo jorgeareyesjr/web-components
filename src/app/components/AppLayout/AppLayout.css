@@ -1,0 +1,6 @@
+.l-layout {
+	position: relative;
+	min-height: 100vh;
+	transition: all 0.3s;
+	overflow-x: hidden;
+}
