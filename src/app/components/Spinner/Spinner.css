@@ -1,0 +1,46 @@
+.c-spinner {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: auto;
+	padding: 15px;
+}
+
+.c-spinner__message {
+	margin-top: 0;
+	text-align: center;
+}
+
+/* Animation */
+.c-spinner__animation {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	margin: 25px auto;
+}
+
+.c-spinner__animation::before {
+	position: absolute;
+	content: "";
+	width: 40px;
+	height: 40px;
+	top: 50%;
+	left: 50%;
+	border: solid 5px;
+	border-radius: 50%;
+	animation: 1.5s linear infinite spinAnimation;
+	animation-play-state: inherit;
+	transform: translate3d(-50%, -50%, 0);
+	will-change: transform;
+}
+
+@keyframes spinAnimation {
+	0% {
+		transform: translate3d(-50%, -50%, 0) rotate(0deg);
+	}
+
+	100% {
+		transform: translate3d(-50%, -50%, 0) rotate(360deg);
+	}
+}
