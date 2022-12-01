@@ -1,0 +1,36 @@
+.c-arrow {
+	display: inline-block;
+	position: relative;
+	margin-left: 8px;
+	padding: 3px;
+	transition: all 0.3s;
+}
+
+/* Visibility */
+.c-arrow--is-visible {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	visibility: visible;
+	opacity: 1;
+	transition: all 0.3s;
+}
+
+.c-arrow--is-hidden {
+	display: none;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s;
+}
+
+/* Directions */
+.c-arrow--up {
+	transform: rotate(-135deg);
+}
+
+.c-arrow--down {
+	bottom: 3px;
+	transform: rotate(45deg);
+}
